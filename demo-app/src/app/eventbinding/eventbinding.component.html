@@ -1,0 +1,10 @@
+
+<h2 [textContent]="title"></h2>
+<img src="{{imgUrl}}"/><br/>
+<button class="btn btn.primary" [class.active]="isActive">Class Binding</button><br/>
+<button (click)="onSave($event)">Event Binding</button>
+<br/>
+
+<input #email (keyup.enter)="onInputClicked(email.value)" />
+<br/>
+<input [(ngModel)]="email2" (keyup.enter)="onInputClicked2(email2.value)"/> {{email2}}
